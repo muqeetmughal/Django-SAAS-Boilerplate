@@ -40,7 +40,7 @@ SHARED_APPS = [
 
 TENANT_APPS = [
     
-    # "authentication",
+    "authentication",
     "django.contrib.auth",
     # 'django.contrib.admin',
     "django.contrib.auth",
