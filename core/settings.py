@@ -33,6 +33,7 @@ SHARED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "authentication",
     # "django.contrib.sites",
     'website'
     # "django_browser_reload",
@@ -54,6 +55,8 @@ TENANT_APPS = [
 INSTALLED_APPS = list(SHARED_APPS) + [
     app for app in TENANT_APPS if app not in SHARED_APPS
 ]
+AUTH_USER_MODEL = "authentication.UserAccount"
+
 MIDDLEWARE = [
     "django_tenants.middleware.main.TenantMainMiddleware",
     'django.middleware.security.SecurityMiddleware',
