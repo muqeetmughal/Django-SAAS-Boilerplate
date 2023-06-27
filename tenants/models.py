@@ -16,7 +16,7 @@ class Tenant(TenantMixin):
     auto_drop_schema = True
 
     class Meta:
-        ordering = ('-featured', '-updated_at')
+        # ordering = ('-featured', '-updated_at')
         db_table = 'tenants'
 
     def __str__(self):
@@ -24,5 +24,7 @@ class Tenant(TenantMixin):
 
 
 class Domain(DomainMixin):
-    pass
+    class Meta:
+        
+        db_table = 'domains'
 
