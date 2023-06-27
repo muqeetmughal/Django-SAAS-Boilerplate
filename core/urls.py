@@ -1,11 +1,15 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, reverse
+from django.shortcuts import redirect
+
 
 urlpatterns = [
-    path('dj-admin/', admin.site.urls),
-    path('auth/', include('authentication.urls')),
+    path("dj-admin/", admin.site.urls),
+    path("auth/", include("authentication.urls")),
+    path("", lambda _: redirect(reverse("dashboard"))),
+    path("dashboard/", include("modules.dashboards.urls")),
 ]
 
 if settings.DEBUG:
