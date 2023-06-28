@@ -265,8 +265,8 @@
                                     <em class="icon ni ni-user-alt"></em>
                                 </div>
                                 <div class="user-info d-none d-xl-block">
-                                    <div class="user-status user-status-active">Administator</div>
-                                    <div class="user-name dropdown-indicator">Abu Bin Ishityak</div>
+                                    {% comment %} <div class="user-status user-status-active">{{request.user.groups}}</div> {% endcomment %}
+                                    <div class="user-name dropdown-indicator">{{request.user.name}}</div>
                                 </div>
                             </div>
                         </a>
@@ -277,8 +277,8 @@
                                         <span>AB</span>
                                     </div>
                                     <div class="user-info">
-                                        <span class="lead-text">Abu Bin Ishtiyak</span>
-                                        <span class="sub-text">info@softnio.com</span>
+                                        <span class="lead-text">{{request.user.name}}</span>
+                                        <span class="sub-text">{{request.user.email}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -292,7 +292,7 @@
                             </div>
                             <div class="dropdown-inner">
                                 <ul class="link-list">
-                                    <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                    <li><a href={% url 'logout' %}><em class="icon ni ni-signout"></em><span>Log out</span></a></li>
                                 </ul>
                             </div>
                         </div>
