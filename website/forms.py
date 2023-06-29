@@ -25,4 +25,4 @@ class StartTrialForm(forms.Form):
     company_name = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': 'form-control form-control-lg'}))
     phone = forms.CharField(max_length=13, widget=forms.TextInput(attrs={'class': 'form-control form-control-lg'}))
 
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control form-control-lg'}))
+    # password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control form-control-lg'}))
