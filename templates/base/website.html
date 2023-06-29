@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <base href="../">
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <!-- Page Title  -->
+    <title>Home | DashLite Admin Template</title>
+    <!-- StyleSheets  -->
+    <link rel="stylesheet" href={% static "website/css/dashlite.css" %}>
+    <link id="skin-default" rel="stylesheet" href={% static "website/css/theme.css" %}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+
+</head>
+
+<body class="nk-body bg-white npc-landing ">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            {% include 'shared/layouts/header-home-website.html' %}
+
+            {% block main %}{% endblock main %}
+            <footer class="footer">
+                <div class="container py-5 py-md-7">
+                    <div class="row g-gs">
+                        <div class="col-lg-3 col-md-9 me-auto">
+                            <div class="widget widget-about">
+                                <a href="html/index.html" class="logo-link">
+                                    <img class="logo-light logo-img" src="./images/logo.png"
+                                        srcset="./images/logo2x.png 2x" alt="logo">
+                                    <img class="logo-dark logo-img" src="./images/logo-dark.png"
+                                        srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                                </a>
+                                <p>As our ultimate goal is to design lots of application so these give you a clear
+                                    understanding where we are heading.</p>
+                                <ul class="social social-primary">
+                                    <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
+                                    <li><a href="#"><em class="icon ni ni-instagram"></em></a></li>
+                                    <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
+                                </ul>
+                            </div><!-- .widget -->
+                        </div><!-- .col -->
+                        <div class="col-lg-2 col-mb-4 col-6">
+                            <div class="widget">
+                                <h6 class="widget-title">Product</h6>
+                                <ul class="link-list">
+                                    <li><a href="#">Integration</a></li>
+                                    <li><a href="#">API</a></li>
+                                    <li><a href="#">Roadmap </a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                </ul>
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-lg-2 col-mb-4 col-6">
+                            <div class="widget">
+                                <h6 class="widget-title">Company</h6>
+                                <ul class="link-list">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Team</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-lg-2 col-mb-4 col-6">
+                            <div class="widget">
+                                <h6 class="widget-title">Recourse</h6>
+                                <ul class="link-list">
+                                    <li><a href="#">Contract US</a></li>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Support</a></li>
+                                    <li><a href="#">Press/News</a></li>
+                                </ul>
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-xl-2 col-lg-3 col-md-8">
+                            <div class="widget">
+                                <h6 class="widget-title">Contact Us</h6>
+                                <ul class="widget-contact row gx-gs">
+                                    <li class="col-mb-6 col-lg-12"><em class="icon ni ni-map-pin-fill"></em><span> 31
+                                            Mirpur Street <br />Dhaka, Bangladesh</span></li>
+                                    <li class="col-mb-6 col-lg-12"><em class="icon ni ni-call-fill"></em><span>(021)
+                                            5248 631 <br />(021) 5148 6324</span></li>
+                                </ul>
+                            </div>
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+                <div class="bg-dark text-center is-dark py-3">
+                    <div class="container">
+                        <div class="text-base"> &copy; 2023, DashLite. Template made by <a href="https://softnio.com"
+                                target="_blank">Softnio</a></div>
+                    </div>
+                </div>
+            </footer><!-- .footer -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- app-root @e -->
+    <!-- JavaScript -->
+    <script src={% static '/website/js/bundle.js' %}></script>
+    <script src={% static '/website/js/scripts.js' %}></script>
+</body>
+
+</html>

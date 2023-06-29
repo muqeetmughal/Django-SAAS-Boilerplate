@@ -34,8 +34,10 @@ SHARED_APPS = [
     "django.contrib.staticfiles",
     "authentication",
     # "django.contrib.sites",
-    "website"
+    "website",
     # "django_browser_reload",
+    'crispy_forms',
+    "crispy_bootstrap5",
 ]
 
 TENANT_APPS = [
@@ -198,3 +200,9 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
     # "sass_processor.finders.CssFinder",
 ]
+
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"

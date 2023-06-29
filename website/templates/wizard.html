@@ -1,0 +1,64 @@
+{% load crispy_forms_tags %}
+
+<form id="trialForm" method="POST" action={% url 'start-trial' %}>
+
+    {% csrf_token %}
+
+    {{form|crispy}}
+
+    <div class="form-group">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </div>
+  </form>
+
+  <script>
+    $(document).ready(function() {
+
+
+      // Retrieve the CSRF token from the cookie
+      var csrftoken = Cookies.get('csrftoken');
+      
+    
+      // Add CSRF token to the headers of AJAX requests
+      $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+          if (!this.crossDomain) {
+            xhr.setRequestHeader('X-CSRFToken', csrftoken);
+          }
+        }
+      });
+    
+      // Submit the form via AJAX
+      $('#trialForm').submit(function(event) {
+        event.preventDefault();  // Prevent default form submission
+
+        var formData = $(this).serialize();
+
+            // Perform AJAX POST request
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),  // Form action URL
+                data: formData,  // Serialize form data
+                success: function(response) {
+                if (response.success) {
+                    console.log("success", response)
+                    toastr.success(response.msg)
+                }else{
+                    toastr.error(response.msg)
+                }
+                // Handle the response
+                console.log(response);
+                },
+                error: function(xhr, errmsg, err) {
+                // Handle any errors
+                console.log(xhr.status + ': ' + xhr.responseText);
+                }
+            });
+
+    
+        
+      });
+    });
+    </script>
+    
+  

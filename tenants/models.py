@@ -6,7 +6,7 @@ class Tenant(TenantMixin):
     paid_until = models.DateField()
     on_trial = models.BooleanField()
     created_on = models.DateField(auto_now_add=True)
-    is_active = models.BooleanField()
+    is_active = models.BooleanField(default=False)
     is_verified = models.BooleanField(default=False)
     company_info = models.TextField(null=True, blank=True)
     name = models.CharField(max_length=100, blank=True, null=True)
