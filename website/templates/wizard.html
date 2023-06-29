@@ -41,7 +41,7 @@
                 data: formData,  // Serialize form data
                 success: function(response) {
                 if (response.success) {
-                    console.log("success", response)
+                    $('#trialForm')[0].reset();
                     toastr.success(response.msg)
                 }else{
                     toastr.error(response.msg)
@@ -54,6 +54,8 @@
                 console.log(xhr.status + ': ' + xhr.responseText);
                 }
             });
+
+            
 
     
         
