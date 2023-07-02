@@ -10,6 +10,7 @@ urlpatterns = [
     path("auth/", include("authentication.urls")),
     path("", lambda _: redirect(reverse("dashboard"))),
     path("dashboard/", include("modules.dashboards.urls")),
+    path("users/", include("modules.accounts.urls")),
 ]
 
 if settings.DEBUG:

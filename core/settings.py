@@ -51,6 +51,7 @@ TENANT_APPS = [
     "django.contrib.staticfiles",
     "modules.pos",
     "modules.dashboards",
+    "modules.accounts",
 ]
 
 
